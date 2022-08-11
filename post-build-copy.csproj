@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Target Name="CopyBuiltFiles" AfterTargets="PostBuildEvent">
+    <Message Text="Copying built files (dll, pdb, xml, deps.json, etc...) to desired project locations" Importance="High" />
+
+		<Copy
+      SourceFiles="bin\Debug\net5\$(ProjectName).dll;bin\Debug\net5\$(ProjectName).pdb;bin\Debug\net5\$(ProjectName).deps.json;bin\Debug\net5\$(ProjectName).xml"
+      DestinationFolder="C:\Users\super\AppData\Local\Packages\7002D27E-3520-4F9C-ABBD-54F4809F740A_9zz4h110yvjzm\LocalState\mods\Indra.Data\_plugins\_dependencies\" />
+
+    <Message Text="Copied build files" Importance="High" />
+	</Target>
+</Project>

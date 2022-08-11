@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFrameworks>net5;net6</TargetFrameworks>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Meep.Tech.Data\Meep.Tech.Data.csproj" />
+    <ProjectReference Include="..\..\Meep.Tech.Web\Meep.Tech.Web.csproj" />
+  </ItemGroup>
+
+	<Import Project="post-build-copy.csproj" Condition="Exists('post-build-copy.csproj')" />
+</Project>
